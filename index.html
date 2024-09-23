@@ -1,37 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>Juan M. Torrijos | Age calculator app</title>
+  </head>
+  <body>
+    <div class="age-calculator-app-container">
+      <form class="calculator-form">
+        <div class="form-group">
+          <label for="day">Day</label>
+          <input
+            type="number"
+            name="day"
+            id="day"
+            min="1"
+            max="31"
+            value="24"
+          />
+        </div>
+        <div class="form-group">
+          <label for="month">Month</label>
+          <input
+            type="number"
+            name="month"
+            id="month"
+            min="1"
+            max="12"
+            value="09"
+          />
+        </div>
+        <div class="form-group">
+          <label for="year">Year</label>
+          <input
+            type="number"
+            name="year"
+            id="year"
+            min="1900"
+            max="2020"
+            value="1984"
+          />
+        </div>
+        <div class="submit-button">
+          <button type="submit" aria-label="Calculate Button">
+            <img src="assets/images/icon-arrow.svg" alt="Icon Arrow" />
+          </button>
+          <hr />
+        </div>
+      </form>
+      <div class="age-container">
+        <p id="years" class="age">
+          <span></span>
+          years
+        </p>
+        <p id="months" class="age">
+          <span>3</span>
+          month
+        </p>
+        <p id="days" class="age">
+          <span>26</span>
+          days
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
