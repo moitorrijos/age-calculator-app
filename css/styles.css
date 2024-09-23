@@ -62,7 +62,7 @@ body {
   background: var(--white);
   padding: 3rem 1.5rem;
   border-radius: 2rem;
-  border-bottom-right-radius: 4rem;
+  border-bottom-right-radius: 8rem;
   max-width: 700px;
   margin-inline: auto;
 
