@@ -1,0 +1,143 @@
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+/* Minimal CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font Face Definitions */
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-ExtraBold.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+body {
+  background: var(--off-white);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  padding: 3rem 1rem;
+  color: var(--off-black);
+}
+
+.age-calculator-app-container {
+  background: var(--white);
+  padding: 3rem 1.5rem;
+  border-radius: 2rem;
+  border-bottom-right-radius: 4rem;
+
+  .calculator-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      label {
+        font-weight: bold;
+        color: var(--smokey-grey);
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        font-size: 0.7rem;
+      }
+
+      input {
+        padding: 0.75rem;
+        border: 1px solid var(--light-grey);
+        border-radius: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: bolder;
+      }
+    }
+    .submit-button {
+      padding-block: 1rem;
+      grid-column: 1 / -1;
+      width: 100%;
+      position: relative;
+      hr {
+        display: block;
+        width: 100%;
+        border: none;
+        border-top: 1px solid var(--light-grey);
+        grid-column: 1 / -1;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+      }
+      button {
+        position: relative;
+        margin-inline: auto;
+        width: 3.5rem;
+        height: 3.5rem;
+        border: none;
+        border-radius: 50%;
+        padding: 1rem;
+        background: var(--purple);
+        display: grid;
+        place-items: center;
+        z-index: 10;
+        img {
+          fill: var(--white);
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+  .age-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    .age {
+      line-height: 1;
+      font-size: 3rem;
+      font-weight: bolder;
+      font-style: italic;
+      span {
+        color: var(--purple);
+      }
+    }
+  }
+}
