@@ -3,7 +3,7 @@ const frameDuration = 1000 / 60;
 const totalFrames = Math.round(animationDuration / frameDuration);
 const easeOutQuad = (t) => t * (2 - t);
 
-const animateCountUp = (el) => {
+export const animateCountUp = (el) => {
   let frame = 0;
   const countTo = parseInt(el.innerHTML, 10);
   const counter = setInterval(() => {
@@ -19,9 +19,4 @@ const animateCountUp = (el) => {
       clearInterval(counter);
     }
   }, frameDuration);
-};
-
-export const runNumAnimations = (className) => {
-  const countUpEls = document.querySelectorAll(className);
-  countUpEls.forEach(animateCountUp);
 };
