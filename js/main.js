@@ -21,13 +21,13 @@ form.addEventListener("submit", (e) => {
   const months = Math.floor((diff % msInYear) / msInMonth);
   const days = Math.floor((diff % msInMonth) / msInDay);
 
-  const docYears = document.querySelector("p#years span");
+  const docYears = document.querySelector("#years span");
   docYears.textContent = years;
   animateCountUp(docYears);
-  const docMonths = document.querySelector("p#months span");
+  const docMonths = document.querySelector("#months span");
   docMonths.textContent = months;
   animateCountUp(docMonths);
-  const docDays = document.querySelector("p#days span");
+  const docDays = document.querySelector("#days span");
   docDays.textContent = days;
   animateCountUp(docDays);
 });
